@@ -1,8 +1,8 @@
 import httpx
-from tools.fakers import get_rangom_email
+from tools.fakers import get_random_email
 # создаем пользователя
 creat_user_payload = {
-    "email": get_rangom_email(),
+    "email": get_random_email(),
     "password": "12345",
     "lastName": "string",
     "firstName": "string",
@@ -26,6 +26,7 @@ get_user_response = httpx.get(f'http://localhost:8000/api/v1/users/{creat_user_r
 get_user_response_data = get_user_response.json()
 print("3 получили данные пользователя: ", get_user_response_data)
 print("3 получили статус код: ", get_user_response.status_code)
+
 
 
 

@@ -1,3 +1,3 @@
 import time
-def get_rangom_email()->str:
+def get_random_email()->str:
     return f'dedkov{time.time()}@mail.ru'

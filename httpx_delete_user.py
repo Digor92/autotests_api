@@ -1,8 +1,8 @@
 import httpx
-from tools.fakers import get_rangom_email
+from tools.fakers import get_random_email
 # создаем пользователя
 creat_user_payload = {
-    "email": get_rangom_email(),
+    "email": get_random_email(),
     "password": "12345",
     "lastName": "string",
     "firstName": "string",
