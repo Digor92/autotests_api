@@ -20,6 +20,7 @@ login_payload = { 'email':creat_user_payload['email'],
 login_user_response = httpx.post('http://localhost:8000/api/v1/authentication/login', json = login_payload)
 login_user_response_data = login_user_response.json()
 print("2 пользователь авторизовался: ", login_user_response_data)
+
 # задаем заголовок авторизации и получаем данного пользователя
 my_headers = {'Authorization':f'Bearer {login_user_response_data["token"]["accessToken"]}'}
 get_user_response = httpx.get(f'http://localhost:8000/api/v1/users/{creat_user_response_data["user"]["id"]}', headers = my_headers)
