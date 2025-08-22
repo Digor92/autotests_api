@@ -39,7 +39,7 @@ print('работа с файлами:  \n',response6.json())
 
 # работа с сессиями
 # когда у нас открылось соединение мы передаем несколько запросов
-# для этого используем класс Cliend
+# для этого используем класс Client
 with httpx.Client() as client:
     response7_1 = client.get('https://jsonplaceholder.typicode.com/todos/1')
     response7_2 = client.get('https://jsonplaceholder.typicode.com/todos/2')

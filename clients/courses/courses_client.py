@@ -2,6 +2,11 @@ from httpx import Response
 from clients.api_client import APIClient
 from typing import TypedDict
 
+from clients.files.files_client import File
+from clients.privat_http_builder import get_privat_http_client, AuthenticationUserDict
+from clients.users.privat_users_client import User
+
+
 class GetCoursesDict(TypedDict):
     """
         Описание структуры запроса на получение списка курсов.
@@ -28,6 +33,26 @@ class UpdateCourseRequestDict(TypedDict):
     minScore: int | None
     description: str | None
     estimatedTime: str | None
+
+class Course(TypedDict):
+    """
+    Описание структуры курса.
+    """
+    id: str
+    title: str
+    maxScore: int
+    minScore: int
+    description: str
+    previewFile: File  # Вложенная структура файла
+    estimatedTime: str
+    createdByUser: User  # Вложенная структура пользователя
+
+# Добавили описание структуры запроса на создание курса
+class CreateCourseRequestDict(TypedDict):
+    """
+    Описание структуры ответа создания курса.
+    """
+    course: Course
 
 class CoursesClient(APIClient):
     def get_courses_api(self, query: GetCoursesDict)->Response:
@@ -66,3 +91,10 @@ class CoursesClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.delete(f"/api/v1/courses/{course_id}")
+
+    def create_course(self, request: CreateCoursesDict) -> CreateCourseRequestDict:
+        response = self.create_course_api(request)
+        return response.json()
+
+def get_course_client(user: AuthenticationUserDict) -> CoursesClient:
+    return CoursesClient(client = get_privat_http_client(user))
