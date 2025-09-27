@@ -1,32 +1,9 @@
 from httpx import Response
-
 from clients.api_client import APIClient
-from typing import TypedDict
+from clients.privat_http_builder import get_privat_http_client, AuthenticationUserSchema
+from clients.users.users_schema import UpdateUserRequestSchema, GetUserResponseSchema
 
-from clients.privat_http_builder import get_privat_http_client, AuthenticationUserDict
 
-
-class UpdateUserRequest(TypedDict):
-    """
-       Описание структуры запроса на обновление пользователя.
-       """
-    email: str|None
-    lastName: str|None
-    firstName: str|None
-    middleName: str|None
-
-class User(TypedDict):
-    """
-       Описание структуры пользователя.
-       """
-    id: str
-    email: str
-    lastName: str
-    firstName: str
-    middleName: str
-
-class GetUserResponseDict(TypedDict):
-    user: User
 class PrivatUserClient(APIClient):
     """
         Клиент для работы с /api/v1/users
@@ -48,7 +25,7 @@ class PrivatUserClient(APIClient):
                 """
         return self.get(f'api/v1/users/{id}')
 
-    def update_user_api(self, id: str, request: UpdateUserRequest):
+    def update_user_api(self, id: str, request: UpdateUserRequestSchema):
         """
                 Метод обновления пользователя по идентификатору.
 
@@ -56,7 +33,7 @@ class PrivatUserClient(APIClient):
                 :param request: Словарь с email, lastName, firstName, middleName.
                 :return: Ответ от сервера в виде объекта httpx.Response
                 """
-        return self.patch(f'api/v1/users/{id}', json = request)
+        return self.patch(f'api/v1/users/{id}', json = request.model_dump(by_alias=True))
     def delete_user_api(self, id: str)-> Response:
         """
                Метод удаления пользователя по идентификатору.
@@ -67,12 +44,17 @@ class PrivatUserClient(APIClient):
         return self.delete(f'api/v1/users/{id}')
 
     # Добавили новый метод для получения json
-    def get_user(self, id: str) -> GetUserResponseDict:
+    def get_user(self, id: str) -> GetUserResponseSchema:
         response = self.get_user_api(id)
-        return response.json()
+        return GetUserResponseSchema.model_validate_json(response.text)
 
 
-def get_privat_users_client(user: AuthenticationUserDict) -> PrivatUserClient:
+def get_privat_users_client(user: AuthenticationUserSchema) -> PrivatUserClient:
+    """
+        Функция создаёт экземпляр PrivatUserClient с уже настроенным HTTP-клиентом.
+
+        :return: Готовый к использованию PrivatUserClient.
+        """
     return PrivatUserClient(client = get_privat_http_client(user))
 
 #client = get_privat_users_client({"email":"dedkov@mail.ru", "password":"12345"})
