@@ -1,4 +1,5 @@
-from pydantic import  BaseModel, HttpUrl
+from pydantic import  BaseModel, HttpUrl, Field
+from tools.fakers import fake
 
 class FileSchema(BaseModel):
     """
@@ -17,6 +18,8 @@ class CreateFileResponseSchema(BaseModel):
     file: FileSchema
 
 class CreateFileRequestSchema(BaseModel):
-    filename: str
-    directory: str
+    filename: str = Field(default_factory=lambda: f"{fake.uuid4()}.png")
+    directory: str = Field(default="tests")
     upload_file: str
+
+#print(CreateFileRequestSchema(upload_file="./test/file.txt"))

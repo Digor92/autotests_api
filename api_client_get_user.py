@@ -1,19 +1,20 @@
 from clients.privat_http_builder import AuthenticationUserSchema
-from clients.public_httpx_builder import get_public_http_client
+#from clients.public_httpx_builder import get_public_http_client
 from clients.users.privat_users_client import get_privat_users_client
-from clients.users.public_users_client import get_public_user_client, PublicUsersClient
-from tools.fakers import get_random_email
+from clients.users.public_users_client import get_public_user_client
 from clients.users.users_schema import CreateUserRequestSchema
+#from tools.fakers import fake
 
 # создаем пользователя
 public_users_client = get_public_user_client()
 
 create_user_request = CreateUserRequestSchema(
-    email = get_random_email(),
-    password="12345",
-    last_name="string",
-    first_name="string",
-    middle_name="string"
+    # все представленные ниже данные можно удалить т.к. мы передаем случайные значения на уровне модели pydantic
+    #email = fake.email(),
+    #password="12345",
+    #last_name="string",
+    #first_name="string",
+    #middle_name="string"
 )
 create_user_response = public_users_client.create_user(create_user_request)
 print('Create user: ', create_user_response)

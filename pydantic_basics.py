@@ -2,7 +2,7 @@
 import uuid
 from pydantic import BaseModel, Field, ConfigDict, computed_field, HttpUrl, EmailStr, ValidationError
 from pydantic.alias_generators import to_camel
-from tools.fakers import get_random_email
+from tools.fakers import fake
 
 class FileSchema(BaseModel):
     id: str
@@ -29,7 +29,7 @@ class CourseSchema(BaseModel):
 
     # динамически генеригует значене id
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    #id: str = Field(default_factory=lambda: get_random_email())
+    #id: str = Field(default_factory=lambda: fake.email())
     title: str = "PlayWrite"
     max_score: int = Field(alias="maxScore", default=1200)
     min_score: int = Field(alias="minScore", default=1100)
