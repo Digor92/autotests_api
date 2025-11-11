@@ -38,5 +38,5 @@ def assert_is_true(actual: Any, name: str):
        """
     assert actual, (
         f'incorrent value: {name}',
-        f'ezpected true but got: {actual}'
+        f'expected true but got: {actual}'
     )
