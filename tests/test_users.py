@@ -1,4 +1,4 @@
-from clients.users.public_users_client import get_public_user_client
+from clients.users.public_users_client import get_public_user_client, PublicUsersClient
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from http import HTTPStatus
 
@@ -10,9 +10,8 @@ import pytest
 
 @pytest.mark.users
 @pytest.mark.regression
-def test_create_user():
-    # инициализируется публичный клиент
-    public_user_client = get_public_user_client()
+def test_create_user(public_user_client: PublicUsersClient):
+    # инициализируется публичный клиент с помощью фикстур в файле conftest
     # инициализируется запрос
     request = CreateUserRequestSchema()
     # возвращается ответ
