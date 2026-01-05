@@ -4,7 +4,7 @@ import pytest
 def test_with_bug():
     assert 1 == 2
 
-@pytest.mark.xfail(reason = "баг исправлен, новсе ще висит маркировка xfail")
+@pytest.mark.xfail(reason = "баг исправлен, но все еще висит маркировка xfail")
 def test_without_bug():
     pass
 

@@ -35,7 +35,8 @@ create_file_request = CreateFileRequestSchema(
     upload_file="./testdata/files/test1.png")
 
 create_file_response = file_client.create_file(create_file_request)
-print('Create file data', create_file_response)
+print('Create fil'
+      'marrie data', create_file_response)
 
 # теперь создаем курс
 create_course_request = CreateCoursesRequestSchema(
