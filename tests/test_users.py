@@ -9,13 +9,18 @@ from tools.assertions.schema import validate_json_schema
 from tools.assertions.users import assert_create_user_response, assert_get_user_response
 import pytest
 
+from tools.fakers import fake
+
 
 @pytest.mark.users
 @pytest.mark.regression
-def test_create_user(public_user_client: PublicUsersClient):
+@pytest.mark.parametrize("email", ["mail.ru", "gmail.com", "yandex.com"])
+def test_create_user(email: str, public_user_client: PublicUsersClient):
     # инициализируется публичный клиент с помощью фикстур в файле conftest
     # инициализируется запрос
-    request = CreateUserRequestSchema()
+    request = CreateUserRequestSchema(email=fake.email(domain=email))
+    #request = CreateUserRequestSchema()
+    print(request.email)
     # возвращается ответ
     response = public_user_client.create_user_api(request)
     # десеарилизуем текст в модель CreateUserResponseSchema
