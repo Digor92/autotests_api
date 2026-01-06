@@ -1,10 +1,12 @@
+from clients.users.privat_users_client import PrivatUserClient
 from clients.users.public_users_client import get_public_user_client, PublicUsersClient
-from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
+from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema, GetUserResponseSchema
 from http import HTTPStatus
 
+from fixtures.users import UserFixture
 from tools.assertions.base import assert_status_code
 from tools.assertions.schema import validate_json_schema
-from tools.assertions.users import assert_create_user
+from tools.assertions.users import assert_create_user_response, assert_get_user_response
 import pytest
 
 
@@ -40,10 +42,18 @@ def test_create_user(public_user_client: PublicUsersClient):
     '''
 
 
-    assert_create_user(request, response_data)
+    assert_create_user_response(request, response_data)
 
     # validate_json_schema проверяет, соответствует ли синтаксис входной строки формату JSON
     # model_json_schema - возвращает из модели json файл
     validate_json_schema(response.json(), response_data.model_json_schema())
 
+@pytest.mark.users
+@pytest.mark.users
+def test_get_user_me(function_user: UserFixture, private_users_client: PrivatUserClient):
+    response = private_users_client.get_user_me_api()
+    response_data = GetUserResponseSchema.model_validate_json(response.text)
+    assert_status_code(response.status_code, HTTPStatus.OK)
+    assert_get_user_response(response_data, function_user.response)
+    validate_json_schema(response.json(), response_data.model_json_schema())
 
