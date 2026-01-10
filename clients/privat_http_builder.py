@@ -1,3 +1,4 @@
+from functools import lru_cache
 from httpx import Client
 from pydantic import BaseModel
 from typing import TypedDict
@@ -5,10 +6,11 @@ from clients.authentication.authentication_client import get_authentication_clie
 from clients.authentication.authentication_schema import loginRequestSchema
 
 
-class AuthenticationUserSchema(BaseModel):
+class AuthenticationUserSchema(BaseModel, frozen = True):
     email: str
     password: str
 
+@lru_cache(maxsize=None)  # Кешируем возвращаемое значение
 def get_privat_http_client(user: AuthenticationUserSchema) -> Client:
 
     authentication_client = get_authentication_client()
