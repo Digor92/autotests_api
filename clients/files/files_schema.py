@@ -22,4 +22,7 @@ class CreateFileRequestSchema(BaseModel):
     directory: str = Field(default="tests")
     upload_file: str
 
-#print(CreateFileRequestSchema(upload_file="./test/file.txt"))
+class GetFileResponseSchema(BaseModel):
+    file: FileSchema
+
+print(CreateFileRequestSchema(upload_file="./test/file.png"))

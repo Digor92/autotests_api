@@ -23,6 +23,7 @@ authentication_user = AuthenticationUserSchema(
     email = create_user_request.email,
     password = create_user_request.password
 )
+print(authentication_user)
 
 # реализуем два клиента работы с файлами и создания курса
 file_client = get_files_client(authentication_user)
@@ -32,7 +33,7 @@ course_client = get_course_client(authentication_user)
 create_file_request = CreateFileRequestSchema(
     #filename="test1.png",
     #directory="courses",
-    upload_file="./testdata/files/test1.png")
+    upload_file="./testdata/files/testQA.png")
 
 create_file_response = file_client.create_file(create_file_request)
 print('Create fil'
@@ -50,5 +51,3 @@ create_course_request = CreateCoursesRequestSchema(
 )
 create_course_response = course_client.create_course(create_course_request)
 print('Create course data:', create_course_response)
-
-
