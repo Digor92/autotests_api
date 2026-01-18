@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel, Field, ConfigDict
 from clients.files.files_schema import FileSchema
 from clients.users.users_schema import UserSchema
@@ -11,11 +13,12 @@ class CourseSchema(BaseModel):
     id: str
     title: str
     max_score: int = Field(alias="maxScore")
-    minScore: int = Field(alias="minScore")
+    min_score: int = Field(alias="minScore")
     description: str
-    previewFile: FileSchema  # Вложенная структура файла
-    estimatedTime: str
-    createdByUser: UserSchema  # Вложенная структура пользователя
+    preview_file: Optional[FileSchema] = None  # Вложенная структура файла
+    estimated_time: str = Field(alias="estimatedTime")
+    created_by_user: Optional[UserSchema] = None  # Вложенная структура пользователя
+
 
 class GetCoursesQuerySchema(BaseModel):
     """
@@ -23,6 +26,12 @@ class GetCoursesQuerySchema(BaseModel):
         """
     model_config = ConfigDict(populate_by_name=True)
     user_id: str = Field(alias= "userId")
+
+class GetCoursesResponseSchema(BaseModel):
+    """
+    Описание структуры ответа на получение списка курсов.
+    """
+    courses: list[CourseSchema]
 
 class CreateCoursesRequestSchema(BaseModel):
     """
@@ -53,6 +62,9 @@ class UpdateCourseRequestSchema(BaseModel):
     description: str | None = Field(default_factory=fake.text)
     estimated_time: str | None = Field(alias="estimatedTime",default_factory=fake.estimated_time)
 
-
-
+class UpdateCourseResponseSchema(BaseModel):
+    """
+        Описание структуры ответа обновления курса.
+        """
+    course: CourseSchema
 

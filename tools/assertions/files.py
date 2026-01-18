@@ -21,18 +21,32 @@ def assert_create_file_response(request: CreateFileRequestSchema, response: Crea
     assert_equal(response.file.filename, request.filename, "filename")
     assert_equal(response.file.directory, request.directory, "directory")
 
-def assert_file(actual: FileSchema, expected: FileSchema):
+# def assert_file(actual: FileSchema, expected: FileSchema):
+#     """
+#         Проверяет, что фактические данные файла соответствуют ожидаемым.
+#
+#         :param actual: Фактические данные файла.
+#         :param expected: Ожидаемые данные файла.
+#         :raises AssertionError: Если хотя бы одно поле не совпадает.
+#         """
+#     assert_equal(actual.id, expected.id, "id")
+#     assert_equal(actual.url, expected.url, "url")
+#     assert_equal(actual.filename, expected.filename, "filename")
+#     assert_equal(actual.directory, expected.directory, "id")
+def assert_file(actual: FileSchema | None, expected: FileSchema | None):
     """
-        Проверяет, что фактические данные файла соответствуют ожидаемым.
+    Проверяет, что фактические данные файла соответствуют ожидаемым.
+    Поддерживает сравнение None ↔ None.
+    """
+    if actual is None and expected is None:
+        return
+    if actual is None or expected is None:
+        raise AssertionError(f"Один из файлов None, другой — нет: actual={actual}, expected={expected}")
 
-        :param actual: Фактические данные файла.
-        :param expected: Ожидаемые данные файла.
-        :raises AssertionError: Если хотя бы одно поле не совпадает.
-        """
     assert_equal(actual.id, expected.id, "id")
     assert_equal(actual.url, expected.url, "url")
     assert_equal(actual.filename, expected.filename, "filename")
-    assert_equal(actual.directory, expected.directory, "id")
+    assert_equal(actual.directory, expected.directory, "directory")
 
 def get_assert_file(get_file_response: GetFileResponseSchema, create_file_response: CreateFileResponseSchema):
     assert_file(get_file_response.file, create_file_response.file)
