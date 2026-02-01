@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/1d487928-4cbb-4919-b9b9-c7d270e82c1c' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTAxVDE4OjA1OjI4LjgwNjY4OCIsInVzZXJfaWQiOiJlZWFkZDgxNS1jZTkxLTRkOWQtODMyMi02OTVjY2JhYmQwOWYifQ.dDmBIZC5ld5LOCIBXWtblDlj-MCn1aRddw9sDH4Nrlg' \
+  -H 'content-length: 330' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Rule himself word travel southern through themselves.","maxScore":85,"minScore":20,"description":"Everything write voice enough goal official son. Save others policy let long.\nAlone central explain care. Analysis authority address letter feeling. Mission system deal purpose short question.","estimatedTime":"10 weeks"}'

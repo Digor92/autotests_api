@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTAxVDE4OjA1OjQyLjM4OTI3NCIsInVzZXJfaWQiOiJjZmI0NDc2ZS03N2JiLTQyNGMtOWJiYS0zNzA0N2Y1MjU5ODcifQ.YPc1sJnt0oiGQp7i5mvqqivePU4cXmjtDgK0C-b6CZM' \
+  -H 'content-length: 337' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Thing room century follow admit suddenly.","maxScore":86,"minScore":26,"description":"Put question child material. Type debate key whom line relationship report. Product agency move fund.","estimatedTime":"3 weeks","previewFileId":"c373edd1-a372-4868-8c27-57f080b7ce43","createdByUserId":"cfb4476e-77bb-424c-9bba-37047f525987"}'

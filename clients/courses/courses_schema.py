@@ -1,6 +1,8 @@
 from typing import Optional
 
 from pydantic import BaseModel, Field, ConfigDict
+from pydantic.alias_generators import to_camel
+
 from clients.files.files_schema import FileSchema
 from clients.users.users_schema import UserSchema
 from tools.fakers import fake
@@ -9,15 +11,17 @@ class CourseSchema(BaseModel):
     """
     Описание структуры курса.
     """
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
     id: str
     title: str
     max_score: int = Field(alias="maxScore")
     min_score: int = Field(alias="minScore")
     description: str
-    preview_file: Optional[FileSchema] = None  # Вложенная структура файла
+    #preview_file: Optional[FileSchema] = None  # Вложенная структура файла
+    preview_file: FileSchema = Field(alias = "previewFile")
     estimated_time: str = Field(alias="estimatedTime")
-    created_by_user: Optional[UserSchema] = None  # Вложенная структура пользователя
+    #created_by_user: Optional[UserSchema] = None  # Вложенная структура пользователя
+    created_by_user: UserSchema = Field(alias = "createdByUser")
 
 
 class GetCoursesQuerySchema(BaseModel):

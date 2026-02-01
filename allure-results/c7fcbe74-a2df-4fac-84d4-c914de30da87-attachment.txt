@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTAxVDE4OjA1OjU1Ljk2NTU3MyIsInVzZXJfaWQiOiI5MDQzMzllZS0zODUxLTRiY2YtYjM0NC01MzFkMmVhZWU1ZTMifQ.sLFVBbj3KWFuXUqxvZZgY9eiO3agT0SpQlLzPLXlqJQ' \
+  -H 'content-length: 306' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Successful study seem religious especially while condition.","courseId":"455f175c-34bd-40e7-b45f-a43105324b1f","maxScore":56,"minScore":3,"orderIndex":75,"description":"Base so happen law Mrs father red. Stay almost ok woman. Prevent set remain support later consider.","estimatedTime":"4 weeks"}'

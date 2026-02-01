@@ -1,10 +1,12 @@
 from typing import Optional
 
+import allure
+
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema, UserSchema, \
     GetUserResponseSchema
 from tools.assertions.base import assert_equal
 
-
+@allure.step("Check create user response")
 def assert_create_user_response(request: CreateUserRequestSchema, response: CreateUserResponseSchema):
     """
         Проверяет, что ответ на создание пользователя соответствует запросу.
@@ -31,6 +33,8 @@ def assert_create_user_response(request: CreateUserRequestSchema, response: Crea
 #     assert_equal(actual.last_name, expected.last_name, "last_name")
 #     assert_equal(actual.first_name, expected.first_name, "first_name")
 #     assert_equal(actual.middle_name, expected.middle_name, "middle_name")
+
+@allure.step("Check user")
 def assert_user(actual: Optional[UserSchema], expected: Optional[UserSchema]):
     """
     Проверяет, что фактические данные пользователя соответствуют ожидаемым.

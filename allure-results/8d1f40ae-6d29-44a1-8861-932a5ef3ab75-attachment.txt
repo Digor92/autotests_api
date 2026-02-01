@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTAxVDE4OjA1OjU1Ljk2NTU3MyIsInVzZXJfaWQiOiI5MDQzMzllZS0zODUxLTRiY2YtYjM0NC01MzFkMmVhZWU1ZTMifQ.sLFVBbj3KWFuXUqxvZZgY9eiO3agT0SpQlLzPLXlqJQ' \
+  -H 'content-length: 373' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Relate hope attorney kitchen late week give.","maxScore":100,"minScore":21,"description":"Word professor party fight technology major ability. Type night marriage training join bring. Eat join religious anything quite hold.","estimatedTime":"1 weeks","previewFileId":"16961a10-e61e-4cd2-9f12-2578afb0d20c","createdByUserId":"904339ee-3851-4bcf-b344-531d2eaee5e3"}'
