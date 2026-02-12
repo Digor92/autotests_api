@@ -4,6 +4,7 @@ import httpx
 from clients.api_client import APIClient
 from clients.public_httpx_builder import get_public_http_client
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
+from tools.routes import APIRoutes
 
 
 class PublicUsersClient(APIClient):
@@ -16,7 +17,8 @@ class PublicUsersClient(APIClient):
 
     @allure.step("Create user")
     def create_user_api(self, request: CreateUserRequestSchema)->httpx.Response:
-        return self.post('/api/v1/users', json = request.model_dump(by_alias=True))
+        # Вместо /api/v1/users используем APIRoutes.USERS
+        return self.post(APIRoutes.USERS, json = request.model_dump(by_alias=True))
 
     # Добавили новый метод для получения json
     def create_user(self, request: CreateUserRequestSchema) -> CreateUserResponseSchema:

@@ -3,6 +3,7 @@ from httpx import Response
 from clients.api_client import APIClient
 from clients.privat_http_builder import get_privat_http_client, AuthenticationUserSchema
 from clients.users.users_schema import UpdateUserRequestSchema, GetUserResponseSchema
+from tools.routes import APIRoutes
 
 
 class PrivatUserClient(APIClient):
@@ -17,7 +18,7 @@ class PrivatUserClient(APIClient):
 
                 :return: Ответ от сервера в виде объекта httpx.Response
                 """
-        return self.get('api/v1/users/me')
+        return self.get(f'{APIRoutes.USERS}/me')
 
     @allure.step("Get user by id {user_id}")
     def get_user_api(self, id: str)-> Response:
@@ -27,7 +28,7 @@ class PrivatUserClient(APIClient):
                 :param user_id: Идентификатор пользователя.
                 :return: Ответ от сервера в виде объекта httpx.Response
                 """
-        return self.get(f'api/v1/users/{id}')
+        return self.get(f'{APIRoutes.USERS}/{id}')
 
     @allure.step("Update user by id {user_id}")
     def update_user_api(self, id: str, request: UpdateUserRequestSchema):
@@ -38,7 +39,7 @@ class PrivatUserClient(APIClient):
                 :param request: Словарь с email, lastName, firstName, middleName.
                 :return: Ответ от сервера в виде объекта httpx.Response
                 """
-        return self.patch(f'api/v1/users/{id}', json = request.model_dump(by_alias=True))
+        return self.patch(f'{APIRoutes.USERS}/{id}', json = request.model_dump(by_alias=True))
 
     @allure.step("Delete user by id {user_id}")
     def delete_user_api(self, id: str)-> Response:
@@ -48,7 +49,7 @@ class PrivatUserClient(APIClient):
                :param user_id: Идентификатор пользователя.
                :return: Ответ от сервера в виде объекта httpx.Response
                """
-        return self.delete(f'api/v1/users/{id}')
+        return self.delete(f'{APIRoutes.USERS}/{id}')
 
     # Добавили новый метод для получения json
     def get_user(self, id: str) -> GetUserResponseSchema:

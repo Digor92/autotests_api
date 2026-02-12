@@ -5,6 +5,7 @@ from typing import Any
 
 
 class APIClient:
+
     def __init__(self, client: Client):
         """
             Базовый API клиент, принимающий объект httpx.Client.

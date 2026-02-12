@@ -31,10 +31,10 @@ json_string = json.dumps(data_dict, indent = 4)
 print(json_string, type(json_string))
 
 # чтение json файла
-with open("json_example.json", "r", encoding = "utf-8") as file:
+with open("json_example.json", "r", encoding ="utf-8") as file:
     read_data = json.load(file)
     print(read_data, 'тип данных: ', type(read_data))
 
 # запись словаря в json файл
-with open('json_user.json', 'w', encoding = 'utf-8') as file:
+with open('json_user.json', 'w', encoding ='utf-8') as file:
     json.dump(data_dict, file, indent = 4, ensure_ascii = False)

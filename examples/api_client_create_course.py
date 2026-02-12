@@ -33,7 +33,7 @@ course_client = get_course_client(authentication_user)
 create_file_request = CreateFileRequestSchema(
     #filename="test1.png",
     #directory="courses",
-    upload_file="./testdata/files/testQA.png")
+    upload_file="../testdata/files/testQA.png")
 
 create_file_response = file_client.create_file(create_file_request)
 print('Create fil'
