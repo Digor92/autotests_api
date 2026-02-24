@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI0VDIyOjI0OjA5LjkyMTUzMSIsInVzZXJfaWQiOiIyMTYxMTAxMy04ZTRkLTQ5ZGQtOWU3ZC1jOWRjNTc0MGEyY2EifQ.pJnBRUeUevxMXkAYiE4qwHyBx5uy00BN9m3Kq2Y-bjg' \
+  -H 'content-length: 426' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Political give summer what scene compare.","maxScore":56,"minScore":27,"description":"Clear cause test leader mean show. Player movie read another.\nTable manage environment three employee model anything.\nShare day care nor staff possible. Take company world many send shake.","estimatedTime":"9 weeks","previewFileId":"74e62c58-035c-4e40-83ef-b16f25fd0fee","createdByUserId":"21611013-8e4d-49dd-9e7d-c9dc5740a2ca"}'

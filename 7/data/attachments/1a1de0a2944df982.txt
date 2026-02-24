@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/669168bf-b77a-4d2f-b548-1351dd9abd16' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI0VDIyOjI0OjA5LjAyNzIyNyIsInVzZXJfaWQiOiI4MmJkMTFkOS0wOTQxLTQ5MjgtODdlNy1mY2ViMDM5Mjk4ZTQifQ.guEVcS1aWIA_37ZOrCjZsHtRj8wzJ7jG8jKlu0dYIyE' \
+  -H 'content-length: 288' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Candidate ago draw painting interest.","maxScore":75,"minScore":20,"description":"General economic first similar stop along activity peace. Blood while step however student particularly edge. He will himself your benefit. Speak really design ago run.","estimatedTime":"3 weeks"}'

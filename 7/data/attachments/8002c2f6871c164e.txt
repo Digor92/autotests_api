@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI0VDIyOjI0OjExLjY4MDgwMCIsInVzZXJfaWQiOiI1MmYwZDFhNy01YzNmLTQ0ZjAtOWEzMi0zNjVkYzM2YzNjOTcifQ.Vhi9p_sA2hUyz1pAkUHrS-0BkdMh_kk7p6NINwjYnfo' \
+  -H 'content-length: 334' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Friend human seek offer.","maxScore":74,"minScore":9,"description":"Would myself animal analysis believe.\nBank even production hear break business ball. Its accept store sing account.","estimatedTime":"2 weeks","previewFileId":"bb31efe8-0a5d-4f26-954f-a9a410483046","createdByUserId":"52f0d1a7-5c3f-44f0-9a32-365dc36c3c97"}'

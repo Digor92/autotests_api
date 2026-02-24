@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI0VDIyOjI0OjExLjY4MDgwMCIsInVzZXJfaWQiOiI1MmYwZDFhNy01YzNmLTQ0ZjAtOWEzMi0zNjVkYzM2YzNjOTcifQ.Vhi9p_sA2hUyz1pAkUHrS-0BkdMh_kk7p6NINwjYnfo' \
+  -H 'content-length: 288' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sport citizen moment.","courseId":"4e2a53c3-8570-448b-be68-32900ba8f46f","maxScore":70,"minScore":10,"orderIndex":66,"description":"Machine suffer away responsibility subject over special. Require find usually ten. Behind purpose shake peace present.","estimatedTime":"3 weeks"}'

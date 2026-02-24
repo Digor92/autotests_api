@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI0VDIyOjI0OjA5LjAyNzIyNyIsInVzZXJfaWQiOiI4MmJkMTFkOS0wOTQxLTQ5MjgtODdlNy1mY2ViMDM5Mjk4ZTQifQ.guEVcS1aWIA_37ZOrCjZsHtRj8wzJ7jG8jKlu0dYIyE' \
+  -H 'content-length: 432' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Member project during decade weight arm.","maxScore":83,"minScore":16,"description":"Next model field hospital movement go. Candidate need final arm soldier full. Across modern economy approach spend.\nCar agency recent simple public. Improve meeting her either. Almost by building.","estimatedTime":"9 weeks","previewFileId":"dc16af6c-1419-46a7-9a30-9ead31ad5bc7","createdByUserId":"82bd11d9-0941-4928-87e7-fceb039298e4"}'

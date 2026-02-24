@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI0VDIyOjI0OjEyLjI2NjA4NCIsInVzZXJfaWQiOiI1ZWJhMDY4NC1iMzUxLTQzNjQtYmZmZC0wYzQwYjdiOTU5YWQifQ.vIOXH60EoUBDhyPP0JQBPcprK9_X8p0qtIYpbZF15tQ' \
+  -H 'content-length: 335' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Attorney next early bring human soldier which race.","maxScore":72,"minScore":13,"description":"Produce spring drop agree professional up. Similar camera threat need until dinner term.","estimatedTime":"10 weeks","previewFileId":"fae836a3-99df-4ed9-8b24-9ab2bbdb514d","createdByUserId":"5eba0684-b351-4364-bffd-0c40b7b959ad"}'

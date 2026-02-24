@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/5d3c4c52-0b64-48ba-a37b-f25109cb0508' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI0VDIyOjI0OjExLjY4MDgwMCIsInVzZXJfaWQiOiI1MmYwZDFhNy01YzNmLTQ0ZjAtOWEzMi0zNjVkYzM2YzNjOTcifQ.Vhi9p_sA2hUyz1pAkUHrS-0BkdMh_kk7p6NINwjYnfo' \
+  -H 'content-length: 245' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sport reflect put term oil no.","maxScore":74,"minScore":18,"orderIndex":60,"description":"Power newspaper participant. Our inside seat. Expect black trip traditional.\nAction note strong go thousand design.","estimatedTime":"5 weeks"}'

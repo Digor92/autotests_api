@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI0VDIyOjI0OjEwLjUwNzQyOCIsInVzZXJfaWQiOiI3Yjg4ZWZlNi03ZjFlLTQyOGItOGQxMy1mYzk3OTc0NDMyOGEifQ.44zIDkzMEpGKIPvnAyJ9sThLdjw54FZ7ZuXwrnjGofA' \
+  -H 'content-length: 342' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Democrat have moment about some reflect you manager.","maxScore":74,"minScore":30,"description":"Interesting general that understand drop she special between. Always administration hold also.","estimatedTime":"10 weeks","previewFileId":"ea983811-438c-4c8e-9913-293ea3cbf9c5","createdByUserId":"7b88efe6-7f1e-428b-8d13-fc979744328a"}'

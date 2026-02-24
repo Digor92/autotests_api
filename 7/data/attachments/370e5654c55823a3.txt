@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI0VDIyOjI0OjEzLjQ4MzAyOCIsInVzZXJfaWQiOiJmMzFlNzJkNS1kMjZhLTQwZjktYmM1NS1lYWJmODUyNjdlYTQifQ.qxC5MWzBccw-REOFcRsbDaeO_jkuIZBh7ksmT39WasQ' \
+  -H 'content-length: 322' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Many south but bring continue purpose ten.","maxScore":57,"minScore":9,"description":"Risk speech view anyone upon apply behind. Amount summer store part before stand fact.","estimatedTime":"6 weeks","previewFileId":"e64d59d2-e674-42d1-9044-549fe7e48c4d","createdByUserId":"f31e72d5-d26a-40f9-bc55-eabf85267ea4"}'

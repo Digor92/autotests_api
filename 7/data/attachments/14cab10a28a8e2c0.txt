@@ -1,0 +1,26 @@
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:33 Make GET request to http://localhost:8000/api/v1/exercises?courseId=d4100c9c-90fb-4f6e-ac32-aa772cd2e42c
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/exercises?courseId=d4100c9c-90fb-4f6e-ac32-aa772cd2e42c
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:102 Check get exercises response
+INFO     BASE_ASSERTIONS:base.py:68 Check that length of "exercises" equals to 1
+INFO     EXERCISES_ASSERTIONS:exercises.py:40 Check exercise
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 39a27652-d990-4884-b48e-23555123620f
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Idea certain adult deep add including.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "course_id" equals to d4100c9c-90fb-4f6e-ac32-aa772cd2e42c
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 53
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 10
+INFO     BASE_ASSERTIONS:base.py:34 Check that "order_index" equals to 69
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Play how force organization loss. Participant discuss represent sport. Republican opportunity together bill drop.
+You we generation speech table require fact.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 10 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema
