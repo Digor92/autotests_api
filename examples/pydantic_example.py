@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+import pytest
 
 class Address(BaseModel):
     city: str

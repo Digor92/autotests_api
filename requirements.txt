@@ -1,6 +1,6 @@
 allure-pytest==2.15.3
 email_validator==2.2.0
-Faker==37.8.8
+Faker==36.2.2
 httpx==0.28.1
 jsonschema==4.25.1
 pydantic==2.11.7
