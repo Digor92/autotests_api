@@ -24,6 +24,7 @@ class Settings(BaseSettings):
         # Указываем, из какого файла читать настройки
         # Указываем кодировку файла
         # Указываем разделитель для вложенных переменных
+        extra='allow',  # Разрешаем дополнительные переменные
         env_file = ".env",
         env_file_encoding = "utf-8",
         env_nested_delimiter = "."
@@ -44,5 +45,5 @@ class Settings(BaseSettings):
 #print(Settings())
 #settings = Settings()
 # Теперь вызываем метод initialize
-settings = Settings.initialize()
+#settings = Settings.initialize()
 
