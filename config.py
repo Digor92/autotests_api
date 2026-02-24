@@ -45,5 +45,5 @@ class Settings(BaseSettings):
 #print(Settings())
 settings = Settings()
 # Теперь вызываем метод initialize
-#settings = Settings.initialize()
+settings = Settings.initialize()
 
