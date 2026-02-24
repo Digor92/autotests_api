@@ -69,6 +69,6 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github_token: ${{secrets.GITHUB_TOKEN}}
           publish_branch: gh-pages # Указываем, что отчёт будет опубликован в ветке gh-pages
           publish_dir: allure-history  # Указываем папку, которая будет опубликована на GitHub Pages

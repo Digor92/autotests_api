@@ -43,7 +43,7 @@ class Settings(BaseSettings):
         return Settings(allure_results_dir=allure_results_dir)
 
 #print(Settings())
-#settings = Settings()
+settings = Settings()
 # Теперь вызываем метод initialize
 #settings = Settings.initialize()
 
