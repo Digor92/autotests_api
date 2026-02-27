@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEzOjM1OjI1LjIxNTA1MyIsInVzZXJfaWQiOiI3NmNhNWI4My1hYWI0LTQ2ZTMtYWQ3NS05ZTdhMGI0YWU0MTkifQ.wi4YYPp33lu87j0wGMdW4cIpWpSYou02p6gWzkq2YtY' \
+  -H 'content-length: 414' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Mention idea able early.","maxScore":61,"minScore":6,"description":"Method deep key sense beyond reduce.\nBoy behind skill politics when live say mother. Who response someone society sport crime operation. Else from paper decide world Mr page it. Over or put half.","estimatedTime":"8 weeks","previewFileId":"10ffc1e0-8dfc-410d-8692-cba5b346ccdf","createdByUserId":"76ca5b83-aab4-46e3-ad75-9e7a0b4ae419"}'

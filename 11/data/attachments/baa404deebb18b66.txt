@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEzOjM1OjMwLjE0MDg2OSIsInVzZXJfaWQiOiIwZDVmYTQxZC01NTVkLTQxYTEtYTg2Ny0yMTRjMThjY2NlMDAifQ.uNdyk8GHCXW8VRT8PSC14uyohhyjRDiAe4E5udBm-ok' \
+  -H 'content-length: 384' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Anyone every necessary enjoy south explain.","courseId":"ccb6791a-d37a-4d6a-919b-a01667a8adb7","maxScore":57,"minScore":2,"orderIndex":72,"description":"See economy picture. Artist character outside development. Service help address cut see culture. Young short few appear leave trip.\nLeg me half answer lawyer road. Mr idea there still measure.","estimatedTime":"3 weeks"}'

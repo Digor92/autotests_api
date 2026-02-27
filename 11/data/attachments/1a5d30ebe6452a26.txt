@@ -1,0 +1,25 @@
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:33 Make GET request to http://localhost:8000/api/v1/exercises/282dda92-7714-46c7-a7df-5a3d7618bd10
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/exercises/282dda92-7714-46c7-a7df-5a3d7618bd10
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:55 Check get exercise response
+INFO     EXERCISES_ASSERTIONS:exercises.py:40 Check exercise
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 282dda92-7714-46c7-a7df-5a3d7618bd10
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Especially ball ask however PM may.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "course_id" equals to 524f17e7-1946-46d6-ac8a-1a29f52f7ac4
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 62
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 1
+INFO     BASE_ASSERTIONS:base.py:34 Check that "order_index" equals to 30
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Along answer wind crime. For event bed politics especially. Indicate age future environmental security.
+Factor war energy former these. Physical finally leader safe and allow small paper.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 6 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema

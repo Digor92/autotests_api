@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEzOjM1OjI5LjIwMzc0NSIsInVzZXJfaWQiOiJkYmQ1MTAxMS0zMTlhLTQyNTEtOWE0Ny02MTI3NWU2NDlkZDUifQ.q-rOv04iMdSGQ_iLfd_aKF5h1h0al5l2UKG2rpNBWt0' \
+  -H 'content-length: 375' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Soldier physical investment teacher far.","maxScore":75,"minScore":28,"description":"Cultural brother threat pattern such. Church later determine every hotel civil standard. Yet woman likely bad. Within issue catch a science.","estimatedTime":"6 weeks","previewFileId":"9472a34d-891f-4774-8309-602a9c078401","createdByUserId":"dbd51011-319a-4251-9a47-61275e649dd5"}'

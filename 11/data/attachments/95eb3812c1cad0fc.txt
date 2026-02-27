@@ -1,0 +1,44 @@
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:89 Check create course response
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Mention idea able early.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 61
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 6
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Method deep key sense beyond reduce.
+Boy behind skill politics when live say mother. Who response someone society sport crime operation. Else from paper decide world Mr page it. Over or put half.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 8 weeks
+INFO     BASE_ASSERTIONS:base.py:34 Check that "preview_file_id" equals to 10ffc1e0-8dfc-410d-8692-cba5b346ccdf
+INFO     BASE_ASSERTIONS:base.py:34 Check that "created_by_user_id" equals to 76ca5b83-aab4-46e3-ad75-9e7a0b4ae419
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:89 Check create course response
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Yard hospital property security.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 71
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 4
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Anyone national successful get. Peace top important she wish. Someone move campaign prove across. Fight leave nor enough power anyone.
+Continue open down indeed. Group sit recently before page.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 5 weeks
+INFO     BASE_ASSERTIONS:base.py:34 Check that "preview_file_id" equals to 10ffc1e0-8dfc-410d-8692-cba5b346ccdf
+INFO     BASE_ASSERTIONS:base.py:34 Check that "created_by_user_id" equals to 76ca5b83-aab4-46e3-ad75-9e7a0b4ae419
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:89 Check create course response
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to People responsibility card understand deep.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 94
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 6
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Beyond world fly account that. Rock cost friend finally themselves million stock.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 8 weeks
+INFO     BASE_ASSERTIONS:base.py:34 Check that "preview_file_id" equals to 10ffc1e0-8dfc-410d-8692-cba5b346ccdf
+INFO     BASE_ASSERTIONS:base.py:34 Check that "created_by_user_id" equals to 76ca5b83-aab4-46e3-ad75-9e7a0b4ae419
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema

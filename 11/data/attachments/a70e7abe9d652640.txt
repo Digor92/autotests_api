@@ -1,0 +1,56 @@
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:33 Make GET request to http://localhost:8000/api/v1/courses?userId=9654b25c-d367-4e09-ae2c-bc66a264a54d
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses?userId=9654b25c-d367-4e09-ae2c-bc66a264a54d
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:69 Check get courses response
+INFO     BASE_ASSERTIONS:base.py:68 Check that length of "courses" equals to 1
+INFO     COURSES_ASSERTIONS:courses.py:43 Check course
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to c3d1db50-af6b-4eff-9cbd-e5b20bbd5321
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Benefit behavior less itself assume program bed.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 77
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 27
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to West just source trade fear executive spring. Nor wide support summer share. Able size player plant watch.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 1 weeks
+INFO     FILES_ASSERTIONS:files.py:38 Check file
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to cf1c4dc9-938e-4c66-a673-16b8f0008bb1
+INFO     BASE_ASSERTIONS:base.py:34 Check that "url" equals to http://localhost:8000/static/tests/e882a411-49fe-4bdc-a767-fbb229d582bd.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "filename" equals to e882a411-49fe-4bdc-a767-fbb229d582bd.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "directory" equals to tests
+INFO     USERS_ASSERTIONS:users.py:54 Check user
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 9654b25c-d367-4e09-ae2c-bc66a264a54d
+INFO     BASE_ASSERTIONS:base.py:34 Check that "email" equals to ypayne@example.com
+INFO     BASE_ASSERTIONS:base.py:34 Check that "first_name" equals to Frances
+INFO     BASE_ASSERTIONS:base.py:34 Check that "last_name" equals to Herrera
+INFO     BASE_ASSERTIONS:base.py:34 Check that "middle_name" equals to Madeline
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema
+INFO     HTTP_CLIENT:event_hooks.py:33 Make GET request to http://localhost:8000/api/v1/courses?userId=9654b25c-d367-4e09-ae2c-bc66a264a54d
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses?userId=9654b25c-d367-4e09-ae2c-bc66a264a54d
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:69 Check get courses response
+INFO     BASE_ASSERTIONS:base.py:68 Check that length of "courses" equals to 1
+INFO     COURSES_ASSERTIONS:courses.py:43 Check course
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to c3d1db50-af6b-4eff-9cbd-e5b20bbd5321
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Benefit behavior less itself assume program bed.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 77
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 27
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to West just source trade fear executive spring. Nor wide support summer share. Able size player plant watch.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 1 weeks
+INFO     FILES_ASSERTIONS:files.py:38 Check file
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to cf1c4dc9-938e-4c66-a673-16b8f0008bb1
+INFO     BASE_ASSERTIONS:base.py:34 Check that "url" equals to http://localhost:8000/static/tests/e882a411-49fe-4bdc-a767-fbb229d582bd.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "filename" equals to e882a411-49fe-4bdc-a767-fbb229d582bd.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "directory" equals to tests
+INFO     USERS_ASSERTIONS:users.py:54 Check user
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 9654b25c-d367-4e09-ae2c-bc66a264a54d
+INFO     BASE_ASSERTIONS:base.py:34 Check that "email" equals to ypayne@example.com
+INFO     BASE_ASSERTIONS:base.py:34 Check that "first_name" equals to Frances
+INFO     BASE_ASSERTIONS:base.py:34 Check that "last_name" equals to Herrera
+INFO     BASE_ASSERTIONS:base.py:34 Check that "middle_name" equals to Madeline
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema

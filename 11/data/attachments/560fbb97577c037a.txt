@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEzOjM1OjI1LjQ4ODI1OSIsInVzZXJfaWQiOiI5ZTU5YWQ3OC03OTNiLTRkM2QtYTg2YS0wNDA3YmViMDVkY2MifQ.HPFYnUWUnjiH0I3UP38LDZvIf44Bto4ZTTWA7uuR9y0' \
+  -H 'content-length: 421' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Street hope nation number region star shoulder.","maxScore":97,"minScore":28,"description":"Onto hard line third fund rate board. Difference mouth husband reveal become ready. Buy market imagine around.\nWith such during three. Off development sister value possible role.","estimatedTime":"1 weeks","previewFileId":"1e896f7b-f066-404b-bbcc-6959e7f82b36","createdByUserId":"9e59ad78-793b-4d3d-a86a-0407beb05dcc"}'

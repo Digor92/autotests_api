@@ -1,0 +1,75 @@
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:33 Make GET request to http://localhost:8000/api/v1/courses?userId=9e59ad78-793b-4d3d-a86a-0407beb05dcc
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses?userId=9e59ad78-793b-4d3d-a86a-0407beb05dcc
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:69 Check get courses response
+INFO     BASE_ASSERTIONS:base.py:68 Check that length of "courses" equals to 3
+INFO     COURSES_ASSERTIONS:courses.py:43 Check course
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to aa8ecaa2-23cb-455a-ac8a-082a2e198157
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Rate difficult station collection exist.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 74
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 7
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Job trouble development team they manage somebody. Defense when international watch determine.
+Apply pay collection evening chair them score. Level president suffer.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 7 weeks
+INFO     FILES_ASSERTIONS:files.py:38 Check file
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 1e896f7b-f066-404b-bbcc-6959e7f82b36
+INFO     BASE_ASSERTIONS:base.py:34 Check that "url" equals to http://localhost:8000/static/tests/e1162463-ab0f-4c2c-804d-677ea7c3c57e.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "filename" equals to e1162463-ab0f-4c2c-804d-677ea7c3c57e.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "directory" equals to tests
+INFO     USERS_ASSERTIONS:users.py:54 Check user
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 9e59ad78-793b-4d3d-a86a-0407beb05dcc
+INFO     BASE_ASSERTIONS:base.py:34 Check that "email" equals to paige63@example.com
+INFO     BASE_ASSERTIONS:base.py:34 Check that "first_name" equals to Kelly
+INFO     BASE_ASSERTIONS:base.py:34 Check that "last_name" equals to Martin
+INFO     BASE_ASSERTIONS:base.py:34 Check that "middle_name" equals to Tonya
+INFO     COURSES_ASSERTIONS:courses.py:43 Check course
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to a2433c70-a2eb-4d2c-8646-e602be618722
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Street hope nation number region star shoulder.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 97
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 28
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Onto hard line third fund rate board. Difference mouth husband reveal become ready. Buy market imagine around.
+With such during three. Off development sister value possible role.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 1 weeks
+INFO     FILES_ASSERTIONS:files.py:38 Check file
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 1e896f7b-f066-404b-bbcc-6959e7f82b36
+INFO     BASE_ASSERTIONS:base.py:34 Check that "url" equals to http://localhost:8000/static/tests/e1162463-ab0f-4c2c-804d-677ea7c3c57e.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "filename" equals to e1162463-ab0f-4c2c-804d-677ea7c3c57e.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "directory" equals to tests
+INFO     USERS_ASSERTIONS:users.py:54 Check user
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 9e59ad78-793b-4d3d-a86a-0407beb05dcc
+INFO     BASE_ASSERTIONS:base.py:34 Check that "email" equals to paige63@example.com
+INFO     BASE_ASSERTIONS:base.py:34 Check that "first_name" equals to Kelly
+INFO     BASE_ASSERTIONS:base.py:34 Check that "last_name" equals to Martin
+INFO     BASE_ASSERTIONS:base.py:34 Check that "middle_name" equals to Tonya
+INFO     COURSES_ASSERTIONS:courses.py:43 Check course
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 0e45e355-aa9d-49be-838e-4d3883d5eb20
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Couple campaign black good law father.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 66
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 11
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Performance much base. Sister have down nice break somebody general.
+Production situation military building mention wide. Care trial would yourself case cost.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 9 weeks
+INFO     FILES_ASSERTIONS:files.py:38 Check file
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 1e896f7b-f066-404b-bbcc-6959e7f82b36
+INFO     BASE_ASSERTIONS:base.py:34 Check that "url" equals to http://localhost:8000/static/tests/e1162463-ab0f-4c2c-804d-677ea7c3c57e.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "filename" equals to e1162463-ab0f-4c2c-804d-677ea7c3c57e.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "directory" equals to tests
+INFO     USERS_ASSERTIONS:users.py:54 Check user
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 9e59ad78-793b-4d3d-a86a-0407beb05dcc
+INFO     BASE_ASSERTIONS:base.py:34 Check that "email" equals to paige63@example.com
+INFO     BASE_ASSERTIONS:base.py:34 Check that "first_name" equals to Kelly
+INFO     BASE_ASSERTIONS:base.py:34 Check that "last_name" equals to Martin
+INFO     BASE_ASSERTIONS:base.py:34 Check that "middle_name" equals to Tonya
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema

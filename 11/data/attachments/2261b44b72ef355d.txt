@@ -1,0 +1,19 @@
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:89 Check create course response
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Clear now simply it six director third.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 63
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 8
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Lead field knowledge bad occur. Partner east identify direction bag system few.
+Seat eight bar rate enough early. Administration score same happen wear save rich none.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 4 weeks
+INFO     BASE_ASSERTIONS:base.py:34 Check that "preview_file_id" equals to 3251a74f-1dc0-4f28-93a2-93406f3c8a6d
+INFO     BASE_ASSERTIONS:base.py:34 Check that "created_by_user_id" equals to 15d198e1-4761-47d4-93a3-52f667e43dbc
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema

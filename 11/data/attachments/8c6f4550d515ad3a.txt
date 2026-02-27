@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEzOjM1OjI3LjY1NDQwMSIsInVzZXJfaWQiOiI0ZDc4Njc5MS05ZjA1LTQyMDMtOTRjMC1lYzNiMDdkMGY2NDEifQ.6Uz4fNCjUMkinBnbNtMQ1hjfkCig9HaEbhPJlgn6Xng' \
+  -H 'content-length: 388' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Poor environment southern wear reality in.","maxScore":55,"minScore":18,"description":"Mrs fill name. Heart yourself administration. Land feeling foreign road. Baby simple senior foreign these carry.\nThing run media grow four investment.","estimatedTime":"9 weeks","previewFileId":"233617f5-e6da-479d-8e56-58e82e373b95","createdByUserId":"4d786791-9f05-4203-94c0-ec3b07d0f641"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/217ed614-695b-4501-b795-95422f23b4cb' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEzOjM1OjIyLjg0MTU0NiIsInVzZXJfaWQiOiJkNGU0YTNhNi0zZjZmLTQxYTktYTAxMi1jNTcyMDE4Y2NhNDMifQ.HKhltmC2_9o4qWHmZD6AphXhdvC2gslbkLMbWKXQ01Q' \
+  -H 'content-length: 287' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Life design mission simple rise yourself.","maxScore":76,"minScore":24,"description":"Each leave write north director civil Mrs. Body race live leader alone international.\nNot campaign magazine personal policy. Wife customer class suggest improve.","estimatedTime":"10 weeks"}'

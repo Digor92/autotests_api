@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEzOjM1OjIyLjg0MTU0NiIsInVzZXJfaWQiOiJkNGU0YTNhNi0zZjZmLTQxYTktYTAxMi1jNTcyMDE4Y2NhNDMifQ.HKhltmC2_9o4qWHmZD6AphXhdvC2gslbkLMbWKXQ01Q' \
+  -H 'content-length: 426' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Dream behavior wind real already nature.","maxScore":98,"minScore":25,"description":"Eight we time yard same explain listen resource. North business local where network room.\nMusic often company end. Clear loss money operation. Statement tonight design happen really fly yet.","estimatedTime":"2 weeks","previewFileId":"de5aef39-0da7-4829-b952-aa2d67305613","createdByUserId":"d4e4a3a6-3f6f-41a9-a012-c572018cca43"}'

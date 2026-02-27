@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEzOjM1OjI3Ljk0Mjk5NCIsInVzZXJfaWQiOiJjMjM0OWUyMC00MjQxLTRiNmYtYmNjMi1hMWIwZWVhZTNlNDkifQ.XFXwtTCcGrUEgIOTT2fJ9thIVsfUPL836_qWNHgmnKU' \
+  -H 'content-length: 435' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Those water hard method travel camera voice.","maxScore":69,"minScore":20,"description":"Final character room set. Agree board example project paper. Enter property past throw court decade behind.\nData exist score reflect. Course a trial. Country country theory politics guess behind.","estimatedTime":"7 weeks","previewFileId":"88ac768c-8905-40d8-8eb8-b873c2624ddc","createdByUserId":"c2349e20-4241-4b6f-bcc2-a1b0eeae3e49"}'
