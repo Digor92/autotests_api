@@ -79,7 +79,13 @@ jobs:
           name: coverage-report
           path: coverage.html
 
-
+    #----------------------- добавляем джобу------------------------------
+  publish_report:
+    if: always()
+    needs: [run-tests]
+    runs-on: ubuntu-latest
+      - steps:
+    # ----------------------- добавляем джобу ----------------------------
       # 12. Шаг для получения истории отчётов Allure, если она существует
       - name: Get Allure history
         uses: actions/checkout@v6  # Опять клонируем репозиторий, чтобы получить историю отчётов
