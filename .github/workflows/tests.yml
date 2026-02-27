@@ -84,7 +84,7 @@ jobs:
     if: always()
     needs: [run-tests]
     runs-on: ubuntu-latest
-      - steps:
+    steps:
     # ----------------------- добавляем джобу ----------------------------
       # 12. Шаг для получения истории отчётов Allure, если она существует
       - name: Get Allure history
