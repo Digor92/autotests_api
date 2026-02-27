@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEyOjQxOjUyLjk5OTk2NyIsInVzZXJfaWQiOiJmZDYzZDEwMy03ODE2LTQxYWMtOThjNS1iYjVmYzUwOWM4OTQifQ.wxQJeUHr7ioHgiFhGxL4OIoqDdmPAszPzzkHrDsFB5I' \
+  -H 'content-length: 333' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ball western court employee staff purpose quality would.","maxScore":89,"minScore":2,"description":"The agreement along sing certain treatment. Artist agency understand tree yet main.","estimatedTime":"9 weeks","previewFileId":"82e7fa6c-c731-4408-827d-7198c5b47c67","createdByUserId":"fd63d103-7816-41ac-98c5-bb5fc509c894"}'

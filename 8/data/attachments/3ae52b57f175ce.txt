@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEyOjQxOjU1LjM5MjQ1NiIsInVzZXJfaWQiOiIxNzRhY2VkNS03NGMyLTQ2OTItOTY5Zi0wZDYzMmQ1MDJlNjcifQ.Y6tUeYYCqxKwxjSNO-PLQwFtXucK0mKpI0qRXHipSck' \
+  -H 'content-length: 410' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Shoulder upon kitchen visit market.","maxScore":56,"minScore":15,"description":"Decision child light ball that. Billion determine reality TV power. Sure these improve him.\nEconomic coach teach blue. Century on understand both. President take decision whether.","estimatedTime":"5 weeks","previewFileId":"b0915a2b-8900-4d08-8c62-f7defd818271","createdByUserId":"174aced5-74c2-4692-969f-0d632d502e67"}'

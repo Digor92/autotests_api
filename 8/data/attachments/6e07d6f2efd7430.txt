@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEyOjQxOjUwLjU4NzU3NSIsInVzZXJfaWQiOiI1YWUyZDljMC1mNDEyLTQyY2YtOTM5ZC03YTFlMzg4ODk1MWYifQ.hO36EssAkeef3uw61lRBTNWuN06FtoDDdCvbCrFwpmo' \
+  -H 'content-length: 375' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Cost affect hospital subject development.","maxScore":65,"minScore":10,"description":"Spring compare peace area side magazine group. Off now work discussion it full owner. Say month care region commercial scientist financial.","estimatedTime":"5 weeks","previewFileId":"672c3697-6e71-488f-b7c7-8ed83ec45409","createdByUserId":"5ae2d9c0-f412-42cf-939d-7a1e3888951f"}'

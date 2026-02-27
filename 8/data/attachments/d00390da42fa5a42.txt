@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEyOjQxOjUwLjAwNDU5NSIsInVzZXJfaWQiOiJkMDlhNjQ4OS03ODgwLTRjZWMtOTdkMi0wZWYwNTU5YmFlYmUifQ.vRMEOdgWlFwjy18YPfbDs-1kXsbv_ubEkY3cjzlCwfw' \
+  -H 'content-length: 427' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Laugh purpose each protect scene thus.","maxScore":77,"minScore":8,"description":"Size offer skin peace level. Tell everyone under hard specific identify.\nFive grow guess weight store north box. Deep occur owner us heavy boy. Law major citizen listen policy bit agree section.","estimatedTime":"4 weeks","previewFileId":"742ccfac-99eb-45d2-8eec-ab880eccaeaa","createdByUserId":"d09a6489-7880-4cec-97d2-0ef0559baebe"}'

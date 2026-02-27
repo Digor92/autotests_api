@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/6486954f-e7c1-437f-820f-a8a2fabc2da7' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEyOjQxOjQ5LjM4MTI2MSIsInVzZXJfaWQiOiJiOGZkMmQyNC1hYTVlLTRhNDgtODZjNi01N2FhZTE3OGU4NDUifQ.UXaIj6CcAirneKKtS_xjhnP8qqLctzPRbwse6EvY7K8' \
+  -H 'content-length: 232' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Force determine argue specific some church than.","maxScore":87,"minScore":21,"description":"Painting police speech leave education marriage some theory. Spring prove who. Trade and present arm.","estimatedTime":"9 weeks"}'

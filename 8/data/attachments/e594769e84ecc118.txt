@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEyOjQxOjUxLjc0NzE0OSIsInVzZXJfaWQiOiI0YjQ1NWIyNC02MzU2LTQxZGYtYmYyZS01ZTEwNjQwZDljNTAifQ.b3CY5zm7nBN1lZhSY3fj8VQjKRWDtZEpvKw9pPjm1Xo' \
+  -H 'content-length: 308' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sport society fish plan.","maxScore":91,"minScore":28,"description":"Maintain south culture that. Letter suddenly head increase include. End again capital my.","estimatedTime":"6 weeks","previewFileId":"ee3657ce-cf92-4d59-9a4c-90ef1a9f6852","createdByUserId":"4b455b24-6356-41df-bf2e-5e10640d9c50"}'

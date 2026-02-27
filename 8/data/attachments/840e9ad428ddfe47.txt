@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEyOjQxOjU2LjMxODUyMCIsInVzZXJfaWQiOiI0MGY2NDIyZi1iM2M2LTQ0NmQtYjM3Yi03ODk0YmEyYzI1MzIifQ.YlZloVdyh3BDgoGhhvob9oLlaK73F6hz5H2ZjaqbOrk' \
+  -H 'content-length: 413' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Leg feeling movie body particular no without.","maxScore":82,"minScore":11,"description":"Water news future lot history reflect sell customer. Brother program suddenly office.\nFull and other through red. Race become people happy strong. Meeting institution year.","estimatedTime":"8 weeks","previewFileId":"2eebe1d6-2627-4170-ab34-1607491be6a3","createdByUserId":"40f6422f-b3c6-446d-b37b-7894ba2c2532"}'

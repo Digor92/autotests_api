@@ -1,0 +1,58 @@
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:33 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:33 Make GET request to http://localhost:8000/api/v1/courses?userId=d09a6489-7880-4cec-97d2-0ef0559baebe
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses?userId=d09a6489-7880-4cec-97d2-0ef0559baebe
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:69 Check get courses response
+INFO     BASE_ASSERTIONS:base.py:68 Check that length of "courses" equals to 1
+INFO     COURSES_ASSERTIONS:courses.py:43 Check course
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 389aca3c-45d3-4c91-b181-42f1b9be6b11
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Laugh purpose each protect scene thus.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 77
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 8
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Size offer skin peace level. Tell everyone under hard specific identify.
+Five grow guess weight store north box. Deep occur owner us heavy boy. Law major citizen listen policy bit agree section.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 4 weeks
+INFO     FILES_ASSERTIONS:files.py:38 Check file
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 742ccfac-99eb-45d2-8eec-ab880eccaeaa
+INFO     BASE_ASSERTIONS:base.py:34 Check that "url" equals to http://localhost:8000/static/tests/ba4b4a6b-a36c-4206-9011-4bc2c8777f12.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "filename" equals to ba4b4a6b-a36c-4206-9011-4bc2c8777f12.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "directory" equals to tests
+INFO     USERS_ASSERTIONS:users.py:54 Check user
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to d09a6489-7880-4cec-97d2-0ef0559baebe
+INFO     BASE_ASSERTIONS:base.py:34 Check that "email" equals to catherine45@example.net
+INFO     BASE_ASSERTIONS:base.py:34 Check that "first_name" equals to James
+INFO     BASE_ASSERTIONS:base.py:34 Check that "last_name" equals to Burch
+INFO     BASE_ASSERTIONS:base.py:34 Check that "middle_name" equals to Aaron
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema
+INFO     HTTP_CLIENT:event_hooks.py:33 Make GET request to http://localhost:8000/api/v1/courses?userId=d09a6489-7880-4cec-97d2-0ef0559baebe
+INFO     HTTP_CLIENT:event_hooks.py:43 Got response 200 OK from http://localhost:8000/api/v1/courses?userId=d09a6489-7880-4cec-97d2-0ef0559baebe
+INFO     BASE_ASSERTIONS:base.py:16 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:69 Check get courses response
+INFO     BASE_ASSERTIONS:base.py:68 Check that length of "courses" equals to 1
+INFO     COURSES_ASSERTIONS:courses.py:43 Check course
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 389aca3c-45d3-4c91-b181-42f1b9be6b11
+INFO     BASE_ASSERTIONS:base.py:34 Check that "title" equals to Laugh purpose each protect scene thus.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "max_score" equals to 77
+INFO     BASE_ASSERTIONS:base.py:34 Check that "min_score" equals to 8
+INFO     BASE_ASSERTIONS:base.py:34 Check that "description" equals to Size offer skin peace level. Tell everyone under hard specific identify.
+Five grow guess weight store north box. Deep occur owner us heavy boy. Law major citizen listen policy bit agree section.
+INFO     BASE_ASSERTIONS:base.py:34 Check that "estimated_time" equals to 4 weeks
+INFO     FILES_ASSERTIONS:files.py:38 Check file
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to 742ccfac-99eb-45d2-8eec-ab880eccaeaa
+INFO     BASE_ASSERTIONS:base.py:34 Check that "url" equals to http://localhost:8000/static/tests/ba4b4a6b-a36c-4206-9011-4bc2c8777f12.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "filename" equals to ba4b4a6b-a36c-4206-9011-4bc2c8777f12.png
+INFO     BASE_ASSERTIONS:base.py:34 Check that "directory" equals to tests
+INFO     USERS_ASSERTIONS:users.py:54 Check user
+INFO     BASE_ASSERTIONS:base.py:34 Check that "id" equals to d09a6489-7880-4cec-97d2-0ef0559baebe
+INFO     BASE_ASSERTIONS:base.py:34 Check that "email" equals to catherine45@example.net
+INFO     BASE_ASSERTIONS:base.py:34 Check that "first_name" equals to James
+INFO     BASE_ASSERTIONS:base.py:34 Check that "last_name" equals to Burch
+INFO     BASE_ASSERTIONS:base.py:34 Check that "middle_name" equals to Aaron
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema

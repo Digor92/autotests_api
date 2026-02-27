@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEyOjQxOjU1LjExODk3OCIsInVzZXJfaWQiOiJjOGMzNDcxNS01ZDhhLTQzM2QtYjMzNC1mODE1ZGNiMzM2ZWQifQ.cOGz9HidHXa6Ey0HkxrFn5ZlROg6N12r9ItY-sZJUOo' \
+  -H 'content-length: 417' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Floor choose hospital change body worker structure discover.","maxScore":56,"minScore":2,"description":"Always field piece spring important news approach. Worry understand born say area tell. Account he home few could health.\nFederal laugh different must fish could.","estimatedTime":"6 weeks","previewFileId":"467fd372-9295-4e38-942b-9eafe90c269e","createdByUserId":"c8c34715-5d8a-433d-b334-f815dcb336ed"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAyLTI3VDEyOjQxOjU0LjE3ODkwOCIsInVzZXJfaWQiOiJiMDgyODRhZS05OTNjLTQ4NTgtYTJlNy0zNWE1ODVhZmFmNjAifQ.R4sk9fZShVm1IA5c4S-IAXCwv5cNkzdjh3iN87s6ZaQ' \
+  -H 'content-length: 415' \
+  -H 'content-type: application/json' \
+  -d '{"title":"And top support happen easy.","maxScore":81,"minScore":17,"description":"All decide woman each allow. Laugh you drug model everything rather. In prepare claim compare owner.\nDirector general scene government. Value successful church national. View picture century.","estimatedTime":"6 weeks","previewFileId":"c9133de0-5710-4c46-a24b-5952afb3fab7","createdByUserId":"b08284ae-993c-4858-a2e7-35a585afaf60"}'
