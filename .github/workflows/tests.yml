@@ -78,6 +78,13 @@ jobs:
         with:
           name: coverage-report
           path: coverage.html
+      # 12. загружаем Allure-отчет в папку results
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
 
     #----------------------- добавляем джобу------------------------------
   publish_report:
@@ -86,7 +93,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # ----------------------- добавляем джобу ----------------------------
-      # 12. Шаг для получения истории отчётов Allure, если она существует
+
+      # 13. скачиваем Allure-отчет в папку results
+      - name: Download Allure results
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
+
+      #  ШАГ 14 ВОЗМОЖНО НЕ НУЖЕН!!!
+      # 14. Шаг для получения истории отчётов Allure, если она существует
       - name: Get Allure history
         uses: actions/checkout@v6  # Опять клонируем репозиторий, чтобы получить историю отчётов
         if: always() #Всегда выполняем, независимо от успеха или неудачи предыдущих шагов
@@ -94,14 +110,14 @@ jobs:
         with:
           ref: gh-pages # указываем ветку gh-pages для получения отчетов
           path: gh-pages # указываем путь для сохранения отчетов
-      # 13. Шаг для генерации и отображения отчёта Allure
+      # 15. Шаг для генерации и отображения отчёта Allure
       - name: Generates Allure Report with  history
         uses: simple-elf/allure-report-action@master  # Используем готовое решение из GitHub Marketplace для генерации Allure отчёта
         if: always() # этот шаг тоже всегда выполняется
         with:
           allure_results: allure-results  # Указываем каталог с результатами тестов
           allure_history: allure-history  # Указываем каталог для истории отчётов Allure
-      # 14. Шаг для деплоя отчёта Allure на GitHub Pages, чтобы его можно было просматривать в браузере
+      # 16. Шаг для деплоя отчёта Allure на GitHub Pages, чтобы его можно было просматривать в браузере
       - name: Deploy report to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
