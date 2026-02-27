@@ -4,6 +4,7 @@ from clients.api_client import APIClient
 from clients.privat_http_builder import get_privat_http_client, AuthenticationUserSchema
 from clients.users.users_schema import UpdateUserRequestSchema, GetUserResponseSchema
 from tools.routes import APIRoutes
+from clients.api_coverage import tracker  # Импортируем трекер
 
 
 class PrivatUserClient(APIClient):
@@ -12,6 +13,7 @@ class PrivatUserClient(APIClient):
         """
 
     @allure.step("Get user me")
+    @tracker.track_coverage_httpx(f'{APIRoutes.USERS}/me')
     def get_user_me_api(self)-> Response:
         """
                 Метод получения текущего пользователя.
@@ -21,17 +23,19 @@ class PrivatUserClient(APIClient):
         return self.get(f'{APIRoutes.USERS}/me')
 
     @allure.step("Get user by id {user_id}")
-    def get_user_api(self, id: str)-> Response:
+    @tracker.track_coverage_httpx(f'{APIRoutes.USERS}/{{user_id}}')
+    def get_user_api(self, user_id: str)-> Response:
         """
                 Метод получения пользователя по идентификатору.
 
                 :param user_id: Идентификатор пользователя.
                 :return: Ответ от сервера в виде объекта httpx.Response
                 """
-        return self.get(f'{APIRoutes.USERS}/{id}')
+        return self.get(f'{APIRoutes.USERS}/{user_id}')
 
     @allure.step("Update user by id {user_id}")
-    def update_user_api(self, id: str, request: UpdateUserRequestSchema):
+    @tracker.track_coverage_httpx(f'{APIRoutes.USERS}/{{user_id}}')
+    def update_user_api(self, user_id: str, request: UpdateUserRequestSchema):
         """
                 Метод обновления пользователя по идентификатору.
 
@@ -39,21 +43,22 @@ class PrivatUserClient(APIClient):
                 :param request: Словарь с email, lastName, firstName, middleName.
                 :return: Ответ от сервера в виде объекта httpx.Response
                 """
-        return self.patch(f'{APIRoutes.USERS}/{id}', json = request.model_dump(by_alias=True))
+        return self.patch(f'{APIRoutes.USERS}/{user_id}', json = request.model_dump(by_alias=True))
 
     @allure.step("Delete user by id {user_id}")
-    def delete_user_api(self, id: str)-> Response:
+    @tracker.track_coverage_httpx(f'{APIRoutes.USERS}/{{user_id}}')
+    def delete_user_api(self, user_id: str)-> Response:
         """
                Метод удаления пользователя по идентификатору.
 
                :param user_id: Идентификатор пользователя.
                :return: Ответ от сервера в виде объекта httpx.Response
                """
-        return self.delete(f'{APIRoutes.USERS}/{id}')
+        return self.delete(f'{APIRoutes.USERS}/{user_id}')
 
     # Добавили новый метод для получения json
-    def get_user(self, id: str) -> GetUserResponseSchema:
-        response = self.get_user_api(id)
+    def get_user(self, user_id: str) -> GetUserResponseSchema:
+        response = self.get_user_api(user_id)
         return GetUserResponseSchema.model_validate_json(response.text)
 
 

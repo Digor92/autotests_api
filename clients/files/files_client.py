@@ -4,11 +4,13 @@ from clients.api_client import APIClient
 from clients.privat_http_builder import get_privat_http_client, AuthenticationUserSchema
 from clients.files.files_schema import FileSchema, CreateFileRequestSchema, CreateFileResponseSchema
 from tools.routes import APIRoutes
+from clients.api_coverage import tracker
 
 
 class FilesClient(APIClient):
-    @allure.step("Get file by id {files_id}")
-    def get_file_api(self, files_id:str)->Response:
+    @allure.step("Get file by id {file_id}")
+    @tracker.track_coverage_httpx(f"{APIRoutes.FILES}/{{file_id}}")
+    def get_file_api(self, file_id:str)->Response:
         """
                 Метод получения файла.
 
@@ -16,17 +18,18 @@ class FilesClient(APIClient):
                 :return: Ответ от сервера в виде объекта httpx.Response
                 """
         #print(f"=== ОТЛАДКА GET_FILE_API ===")
-        #print(f"1. Получили files_id = {files_id}")
-        #print(f"2. Тип files_id = {type(files_id)}")
-        #print(f"3. Формируем URL: api/v1/files/{files_id}")
+        #print(f"1. Получили file_id = {file_id}")
+        #print(f"2. Тип file_id = {type(file_id)}")
+        #print(f"3. Формируем URL: api/v1/files/{file_id}")
 
-        #response = self.get(f'api/v1/files/{files_id}')
+        #response = self.get(f'api/v1/files/{file_id}')
 
         #print(f"4. Получили response: {response}")
         #return response
-        return self.get(f"{APIRoutes.FILES}/{files_id}")
+        return self.get(f"{APIRoutes.FILES}/{file_id}")
 
     @allure.step("Create file")
+    @tracker.track_coverage_httpx(APIRoutes.FILES)
     def create_file_api(self, request:CreateFileRequestSchema) -> Response:
         """
                 Метод создания файла.
@@ -49,6 +52,7 @@ class FilesClient(APIClient):
         # return self.post('api/v1/files', data=data, files=files)
 
     @allure.step("Delete file by id {file_id}")
+    @tracker.track_coverage_httpx(f"{APIRoutes.FILES}/{{file_id}}")
     def delete_file_api(self, file_id: str) -> Response:
         """
         Метод удаления файла.

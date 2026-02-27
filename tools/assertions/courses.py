@@ -55,7 +55,7 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
 @allure.step("Check get courses response")
 def assert_get_courses_response(
         get_courses_response: GetCoursesResponseSchema,
-        create_course_responses: list[CreateCourseResponseSchema]
+        create_courses_responses: list[CreateCourseResponseSchema]
 ):
     """
     Проверяет, что ответ на получение списка курсов соответствует ответам на их создание.
@@ -67,9 +67,9 @@ def assert_get_courses_response(
 
     # Логируем факт начала проверки
     logger.info("Check get courses response")
-    assert_length(get_courses_response.courses, create_course_responses, "courses")
+    assert_length(get_courses_response.courses, create_courses_responses, "courses")
 
-    for index, create_course_response in enumerate(create_course_responses):
+    for index, create_course_response in enumerate(create_courses_responses):
         assert_course(get_courses_response.courses[index], create_course_response.course)
 
 @allure.step("Check create course response")

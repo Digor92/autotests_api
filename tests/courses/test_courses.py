@@ -1,6 +1,6 @@
 
 from http import HTTPStatus
-
+from fixtures.courses import CourseFixture
 import pytest
 from allure_commons.types import Severity
 
@@ -48,6 +48,18 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+
+
+
+        query = GetCoursesQuerySchema(user_id=function_user.response.user.id)
+        response = courses_client.get_courses_api(query)
+        response_data = GetCoursesResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_get_courses_response(response_data, [function_course.response])
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
     @allure.title("Update course")
     @allure.title("Update course")
     @allure.story(AllureStory.UPDATE_ENTITY)
@@ -81,10 +93,75 @@ class TestCourses:
             created_by_user_id=function_user.response.user.id)
         response = courses_client.create_course_api(request)
         response_data = CreateCourseResponseSchema.model_validate_json(response.text)
-        #print("\n Raw response JSON:", response.json())
-        #print("\n new course: ", response_data)
 
         assert_status_code(response.status_code, HTTPStatus.OK)
         assert_create_course_response(request, response_data)
-
         validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.title("Create multiple courses")
+    @allure.tag(AllureTag.CREATE_ENTITY)
+    @allure.story(AllureStory.GET_ENTITIES)
+    @allure.severity(Severity.BLOCKER)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
+    def test_create_courses(self,
+                                     courses_client: CoursesClient,
+                                     function_user: UserFixture,
+                                     function_file: FileFixture):
+        courses_count = 3
+
+        for _ in range(courses_count):
+            request = CreateCoursesRequestSchema(
+                preview_file_id=function_file.response.file.id,
+                created_by_user_id=function_user.response.user.id
+            )
+            response = courses_client.create_course_api(request)
+            response_data = CreateCourseResponseSchema.model_validate_json(response.text)
+
+            assert_status_code(response.status_code, HTTPStatus.OK)
+            assert_create_course_response(request, response_data)
+            validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.title("Get courses multiple")
+    @allure.tag(AllureTag.GET_ENTITIES)
+    @allure.story(AllureStory.GET_ENTITIES)
+    @allure.severity(Severity.BLOCKER)
+    @allure.sub_suite(AllureStory.GET_ENTITY)
+    def test_get_courses_multiple(self,
+                                  courses_client: CoursesClient,
+                                  function_user: UserFixture,
+                                  function_courses):
+        query = GetCoursesQuerySchema(user_id=function_user.response.user.id)
+        response = courses_client.get_courses_api(query)
+        response_data = GetCoursesResponseSchema.model_validate_json(response.text)
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        # Собираем ожидаемые ответы из фикстуры
+        expected_responses = [cf.response for cf in function_courses]
+        # Вызываем существующую проверку
+        assert_get_courses_response(response_data, expected_responses)
+        # Валидация схемы
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+def test_courses_fixture(function_courses):
+    """Простой тест для проверки создания разного количества курсов"""
+
+    print(f"\n{'=' * 60}")
+    print(f"ЗАПУСК ТЕСТА: создано {len(function_courses)} курсов")
+    print(f"{'=' * 60}")
+
+    # Выводим информацию о каждом созданном курсе
+    for i, course_fixture in enumerate(function_courses, 1):
+        print(f"\n--- Курс {i} из {len(function_courses)} ---")
+        print(f"ID курса: {course_fixture.response.course.id}")
+        print(f"Название: {course_fixture.response.course.title}")
+        print(f"Описание: {course_fixture.response.course.description[:50]}...")
+        print(f"Max score: {course_fixture.response.course.max_score}")
+        print(f"Min score: {course_fixture.response.course.min_score}")
+        print(f"Весь ответ: {course_fixture.response.model_dump()}")
+        print(f"-" * 40)
+
+    print(f"\n{'=' * 60}")
+    print(f"ИТОГО в этом тесте: {len(function_courses)} курсов")
+    print(f"{'=' * 60}")
+
+    # Простая проверка
+    assert len(function_courses) in [1, 2, 3]

@@ -9,6 +9,10 @@ class CourseFixture(BaseModel):
     request: CreateCoursesRequestSchema
     response: CreateCourseResponseSchema
 
+#class CourseListFixture(BaseModel):
+#    '''фикстура для списка курсов'''
+#   courses: list[CourseFixture]
+
 @pytest.fixture
 def courses_client(function_user: UserFixture) -> CoursesClient:
     return get_course_client(function_user.authentication_user)
@@ -25,3 +29,23 @@ def function_course(
     )
     response = courses_client.create_course(request)
     return CourseFixture(request = request, response = response)
+
+@pytest.fixture(params = [1,2,3])
+def function_courses(
+        request,
+        courses_client: CoursesClient,
+        function_user: UserFixture,
+        function_file: FileFixture) -> list[CourseFixture]:
+    courses_list = list()
+    for _ in range(request.param):
+        course_request = CreateCoursesRequestSchema(
+            preview_file_id=function_file.response.file.id,
+            created_by_user_id=function_user.response.user.id
+        )
+        course_response = courses_client.create_course(course_request)
+        courses_list.append(CourseFixture(request = course_request,
+                                          response = course_response))
+    return courses_list
+
+
+
